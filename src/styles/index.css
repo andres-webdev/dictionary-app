@@ -1,0 +1,98 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+}
+header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header img {
+  width: 1.75344rem;
+  height: 1.97263rem;
+  flex-shrink: 0;
+}
+header .header__fontBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+  border-right: solid 1px #E9E9E9;
+}
+header .header__fontBtn span {
+  color: #2D2D2D;
+  font-size: 0.875rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 2rem;
+}
+header .header__iconBtn {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-bottom: solid 2px #A445ED;
+  border-right: solid 2px #A445ED;
+  margin: -3px 0 0 0;
+  transform: rotate(45deg);
+}
+header .header__toggle {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  margin-left: 1rem;
+}
+header .header__toggle button {
+  display: flex;
+  align-content: center;
+}
+header .header__toggle .header__toggle-btn {
+  font-size: 2.5rem;
+  rotate: 180deg;
+  color: #757575;
+  transition: all ease-in-out 20ms;
+}
+header .header__toggle .header__toggle-logo {
+  font-size: 1.7rem;
+  color: #757575;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.app {
+  margin: 0;
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+}
+
+.dark {
+  background-color: #050505;
+}
+.dark header .header__fontBtn span {
+  color: #fff;
+}
+.dark header .header__toggle .header__toggle-btn {
+  color: #A445ED;
+  transform: rotate(180deg);
+}
+.dark header .header__toggle .header__toggle-logo {
+  color: #A445ED;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,10 +1,12 @@
-import './App.css'
+import Header from './scenes/Header/Header'
+import './styles/index.css'
 
 function App() {
 
   return (
-    <>
-    </>
+    <div className='app'> 
+      <Header />
+    </div>
   )
 }
 
