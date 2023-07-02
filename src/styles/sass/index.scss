@@ -1,5 +1,6 @@
 @import './variables';
 @import '../../scenes/Header/styles/sass/header.scss';
+@import '../../scenes/Main/SearchBar/styles/sass/searchBar.scss';
 
 body {
     margin: 0 auto;
@@ -31,4 +32,5 @@ button {
 .dark {
     @include darkThemeApp;
     @include header-dark-theme;
+    @include search-dark-theme;
 } 

@@ -58,6 +58,37 @@ header .header__toggle .header__toggle-logo {
   color: #757575;
 }
 
+.search {
+  display: flex;
+  position: relative;
+  margin: 1.5rem 0;
+  height: 3rem;
+}
+.search input {
+  display: inline-block;
+  width: 100%;
+  height: 3rem;
+  padding-left: 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #F4F4F4;
+  color: #2D2D2D;
+  font-size: 1rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.search input:focus {
+  outline: none;
+  border: solid 1.5px #A445ED;
+}
+.search img {
+  position: absolute;
+  right: 1.53rem;
+  top: 1rem;
+}
+
 body {
   margin: 0 auto;
   box-sizing: border-box;
@@ -93,6 +124,10 @@ button {
 }
 .dark header .header__toggle .header__toggle-logo {
   color: #A445ED;
+}
+.dark .search input {
+  background-color: #1F1F1F;
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */
