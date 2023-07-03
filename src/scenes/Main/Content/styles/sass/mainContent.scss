@@ -1,0 +1,224 @@
+@import '../../../../../styles/sass/variables';
+
+main {
+    display: flex;
+    flex-direction: column;
+   
+    section.main__section-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 1.81rem;
+
+        img {
+            width: 3rem;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+
+            h1 {
+                color: theme-color("secundary", "light");
+                font-size: 2rem;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            span {
+                font-size: 1.125rem;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.5rem;
+                color: theme-color("standard", "alternative");
+            }
+        }
+    }
+    // Secion noun and verb
+    section.main__section {
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+
+            h3 {
+                font-size: 1.125rem;
+                font-family: Inter;
+                font-style: italic;
+                font-weight: 700;
+                line-height: normal;
+                color: theme-color("secundary", "light");
+            } 
+        }
+        
+        h4 {
+            font-size: 1rem;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: theme-color("standard", "base");
+            margin-top: 1.5rem;
+        }
+
+        ul {
+            margin-top: 1rem;
+            padding-inline-start: 1rem;
+
+            li {
+                padding-left: 0.25rem;
+                font-size: 0.9375rem;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.5rem;
+                margin-bottom: 0.8rem;
+                color: theme-color("standard", "alternative");
+
+                span {
+                    color: theme-color("secundary", "light");
+                }
+            }
+        }
+
+        .main__section-synonyms {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+
+            .title {
+                margin-top: 0;
+            }
+
+            span {
+                font-size: 1rem;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: theme-color("standard", "alternative");
+            }
+        }
+
+        .main__section__list-item {
+            font-size: 0.9375rem;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5rem;
+            list-style: none;
+            color: theme-color("standard", "base");
+        }
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 1rem;
+
+        .separator {
+            display: inline-flex;
+            width: 100%;
+            border-top: solid 1px theme-color('quaternary', 'light');
+        }
+    }  
+
+    section.main__section-sources {
+        h5 {
+            font-size: 0.875rem;
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: underline;
+            color: theme-color("standard", "base");
+        }
+
+        ul {
+            padding-inline-start: 0;
+
+            li{ 
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+
+                span{
+                    font-size: 0.875rem;
+                    font-family: Inter;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-decoration-line: underline;
+                    text-decoration-color: theme-color("standard", "base");
+                    color: theme-color("secundary", "light");
+                }
+            }
+        }
+    }
+}
+
+@mixin content-dark-theme {
+    main {   
+        section.main__section-title {
+            div {
+                h1 {
+                    color: theme-color("secundary", "dark");
+                }
+
+            }
+        }
+        // Secion noun and verb
+        section.main__section {
+            div {
+                h3 {
+                    color: theme-color("secundary", "dark");
+                } 
+            }
+            
+            ul {
+    
+                li {
+                    span {
+                        color: theme-color("secundary", "dark");
+                    }
+                }
+            }
+
+        }
+    
+        figure {
+    
+            .separator {
+                border-top: solid 1px theme-color('quaternary', 'dark');
+            }
+        }  
+    
+        section.main__section-sources {
+    
+            ul {
+    
+                li{ 
+                    span{
+                        color: theme-color("secundary", "dark");
+                    }
+                }
+            }
+        }
+    }
+}

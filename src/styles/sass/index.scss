@@ -1,6 +1,7 @@
 @import './variables';
 @import '../../scenes/Header/styles/sass/header.scss';
 @import '../../scenes/Main/SearchBar/styles/sass/searchBar.scss';
+@import '../../scenes/Main/Content/styles/sass/mainContent.scss';
 
 body {
     margin: 0 auto;
@@ -25,6 +26,11 @@ button {
     padding: 0;
 }
 
+h1, h1, h3, h4, h5 {
+    margin:  0;
+    padding: 0;
+}
+
 @mixin darkThemeApp {
     background-color: theme-color('primary', 'dark');
 }
@@ -33,4 +39,5 @@ button {
     @include darkThemeApp;
     @include header-dark-theme;
     @include search-dark-theme;
+    @include content-dark-theme;
 } 
