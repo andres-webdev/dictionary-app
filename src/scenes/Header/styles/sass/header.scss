@@ -1,0 +1,123 @@
+@import '../../../../styles/sass/variables'; 
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    img {
+        width: 1.75344rem;
+        height: 1.97263rem;
+        flex-shrink: 0;
+    }
+
+    .header__fontBtn {
+        display: flex;
+        align-items: center;
+        gap: $rem;
+        padding-right: $rem;
+        border-right: solid 1px theme-color('quaternary', 'light');
+    
+        span {
+            color: theme-color('secundary', 'light');
+            font-size: 0.875rem;
+            font-family: Inter;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+    }
+    
+    .header__iconBtn {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-bottom: solid 2px theme-color("standard", "alternative");
+        border-right: solid 2px theme-color("standard", "alternative");
+        margin: -3px 0 0 0;
+        transform: rotate(45deg);
+    }
+
+    .header__toggle {
+        display: flex;
+        flex-direction: row;
+        gap: $rem * 0.75;
+        margin-left: $rem;
+        
+        button {
+            display: flex;
+            align-content: center;
+        }
+
+        .header__toggle-btn {
+            font-size: $rem * 2.5;
+            rotate: 180deg;
+            color: theme-color('standard', 'base');
+            transition: all ease-in-out 20ms;
+        }
+
+        .header__toggle-logo {
+            font-size: $rem * 1.7;
+            color: theme-color("standard", 'base');
+        }
+    }
+}
+
+@mixin header-dark-theme {
+    header {
+        .header__fontBtn span {
+            color: theme-color('secundary', 'dark');
+        }
+
+        .header__toggle {
+            .header__toggle-btn {
+                color: theme-color('standard', 'alternative');
+                transform: rotate(180deg);
+            }
+
+            .header__toggle-logo {
+                color: theme-color("standard", 'alternative');
+            }
+        }
+    }
+}
+
+
+@mixin header-media-md {
+    header {
+        img {
+            width: 2rem;
+            height: 2.28125rem;
+        }
+
+        .header__fontBtn {
+            gap: $rem * 1.15;
+            padding-right: $rem * 1.6;
+        
+            span {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+        }
+        
+        .header__iconBtn {
+            width: 0.45rem;
+            height: 0.45rem;
+        }
+    
+        .header__toggle {
+            gap: $rem * 1.25;
+            margin-left: $rem * 1.6;
+    
+            .header__toggle-logo {
+                font-size: $rem * 1.8;
+            }
+        }
+    }
+}
