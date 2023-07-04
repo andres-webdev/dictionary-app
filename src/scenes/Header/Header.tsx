@@ -5,7 +5,7 @@ export default function Header(){
     return (
         <>
             <header>
-                <img src="./src/assets/images/logo.svg" />
+                <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/logo_xgtbef.svg" />
                 <div> 
                     <div>
                         <button className="header__fontBtn">

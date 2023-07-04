@@ -1,4 +1,4 @@
-@import '../../../../styles/sass/variables';
+@import '../../../../styles/sass/variables'; 
 
 header {
     display: flex;
@@ -83,6 +83,40 @@ header {
 
             .header__toggle-logo {
                 color: theme-color("standard", 'alternative');
+            }
+        }
+    }
+}
+
+
+@mixin header-media-md {
+    header {
+        img {
+            width: 2rem;
+            height: 2.28125rem;
+        }
+
+        .header__fontBtn {
+            gap: $rem * 1.15;
+            padding-right: $rem * 1.6;
+        
+            span {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+        }
+        
+        .header__iconBtn {
+            width: 0.45rem;
+            height: 0.45rem;
+        }
+    
+        .header__toggle {
+            gap: $rem * 1.25;
+            margin-left: $rem * 1.6;
+    
+            .header__toggle-logo {
+                font-size: $rem * 1.8;
             }
         }
     }
