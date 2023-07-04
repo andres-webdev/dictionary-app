@@ -42,3 +42,13 @@
         }
     }
 }
+
+@mixin search-media-md {
+    .search {
+        margin: 3.2rem 0 2.7rem 0;
+    
+        input {
+            font-size: 1.25rem;
+        }
+    }
+}
