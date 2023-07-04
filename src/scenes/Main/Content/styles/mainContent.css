@@ -129,12 +129,15 @@ main section.main__section-sources ul {
 }
 main section.main__section-sources ul li {
   list-style: none;
+  display: inline-block;
+}
+main section.main__section-sources ul li a {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
-main section.main__section-sources ul li span {
+main section.main__section-sources ul li a span {
   font-size: 0.875rem;
   font-family: Inter;
   font-style: normal;

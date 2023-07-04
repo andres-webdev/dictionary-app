@@ -6,7 +6,7 @@ export default function MainContent(){
                     <h1>Keyword</h1>
                     <span>/ˈkiːbɔːd/</span>
                 </div>
-                <img src="./src/assets/images/icon-play.svg" alt="play-botton" />
+                <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331218/dictonary-api/icon-play_p9o8lp.svg" alt="play-botton" />
             </section>
             <section className="main__section">
                 <div>
@@ -48,8 +48,10 @@ export default function MainContent(){
                 <h5>Source</h5>
                 <ul>
                     <li>
-                        <span>https://en.wiktionary.org/wiki/keyboard</span>
-                        <img src="./src/assets/images/icon-new-window.svg" alt="new-window" />
+                        <a href="https://en.wiktionary.org/wiki/keyboard" target="blank">
+                            <span>https://en.wiktionary.org/wiki/keyboard</span>
+                            <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/icon-new-window_oapxef.svg" alt="new-window" />
+                        </a>
                     </li>
                 </ul>
             </section>
