@@ -220,12 +220,15 @@ main section.main__section-sources ul {
 }
 main section.main__section-sources ul li {
   list-style: none;
+  display: inline-block;
+}
+main section.main__section-sources ul li a {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
-main section.main__section-sources ul li span {
+main section.main__section-sources ul li a span {
   font-size: 0.875rem;
   font-family: Inter;
   font-style: normal;
@@ -242,7 +245,11 @@ body {
   padding: 0;
 }
 
-.app {
+body, .app {
+  min-height: 100vh;
+}
+
+.app__container {
   margin: 0;
   padding: 1.5rem;
   background-color: #fff;
@@ -264,37 +271,129 @@ h1, h1, h3, h4, h5 {
   padding: 0;
 }
 
-.dark {
+.app.dark {
   background-color: #050505;
 }
-.dark header .header__fontBtn span {
+
+.dark .app__container {
+  background-color: #050505;
+}
+.dark .app__container header .header__fontBtn span {
   color: #fff;
 }
-.dark header .header__toggle .header__toggle-btn {
+.dark .app__container header .header__toggle .header__toggle-btn {
   color: #A445ED;
   transform: rotate(180deg);
 }
-.dark header .header__toggle .header__toggle-logo {
+.dark .app__container header .header__toggle .header__toggle-logo {
   color: #A445ED;
 }
-.dark .search input {
+.dark .app__container .search input {
   background-color: #1F1F1F;
   color: #fff;
 }
-.dark main section.main__section-title div h1 {
+.dark .app__container main section.main__section-title div h1 {
   color: #fff;
 }
-.dark main section.main__section div h3 {
+.dark .app__container main section.main__section div h3 {
   color: #fff;
 }
-.dark main section.main__section ul li span {
+.dark .app__container main section.main__section ul li span {
   color: #fff;
 }
-.dark main figure .separator {
+.dark .app__container main figure .separator {
   border-top: solid 1px #3A3A3A;
 }
-.dark main section.main__section-sources ul li span {
+.dark .app__container main section.main__section-sources ul li span {
   color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .app__container {
+    padding: 2.5rem;
+  }
+  header img {
+    width: 2rem;
+    height: 2.28125rem;
+  }
+  header .header__fontBtn {
+    gap: 1.15rem;
+    padding-right: 1.6rem;
+  }
+  header .header__fontBtn span {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  header .header__iconBtn {
+    width: 0.45rem;
+    height: 0.45rem;
+  }
+  header .header__toggle {
+    gap: 1.25rem;
+    margin-left: 1.6rem;
+  }
+  header .header__toggle .header__toggle-logo {
+    font-size: 1.8rem;
+  }
+  .search {
+    margin: 3.2rem 0 2.7rem 0;
+  }
+  .search input {
+    font-size: 1.25rem;
+  }
+  main section.main__section-title {
+    margin-bottom: 2.5rem;
+  }
+  main section.main__section-title img {
+    width: 4rem;
+    height: 4rem;
+  }
+  main section.main__section-title div h1 {
+    font-size: 4rem;
+  }
+  main section.main__section-title div span {
+    font-size: 1.5rem;
+  }
+  main section.main__section div {
+    gap: 1.25rem;
+  }
+  main section.main__section div h3 {
+    font-size: 1.5rem;
+    font-family: Inter;
+  }
+  main section.main__section h4 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  main section.main__section ul {
+    margin-top: 1.5rem;
+    padding-inline-start: 2.3rem;
+  }
+  main section.main__section ul li {
+    padding-left: 0.5rem;
+    font-size: 1.125rem;
+  }
+  main section.main__section .main__section-synonyms {
+    margin: 2rem 0 2.5rem 0;
+  }
+  main section.main__section .main__section-synonyms span {
+    font-size: 1.25rem;
+  }
+  main section.main__section .main__section__list-item {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  main section.main__section-sources {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .app__container {
+    margin: 0 auto;
+    width: 46rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

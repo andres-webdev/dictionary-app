@@ -7,9 +7,11 @@ function App() {
 
   return (
     <div className='app dark'> 
-      <Header />
-      <SearchBar />
-      <MainContent />
+      <div className='app__container'>
+        <Header />
+        <SearchBar />
+        <MainContent />
+      </div>
     </div>
   )
 }

@@ -2,6 +2,7 @@
 @import '../../scenes/Header/styles/sass/header.scss';
 @import '../../scenes/Main/SearchBar/styles/sass/searchBar.scss';
 @import '../../scenes/Main/Content/styles/sass/mainContent.scss';
+@import './config';
 
 body {
     margin: 0 auto;
@@ -9,7 +10,11 @@ body {
     padding: 0;
 }
 
-.app {
+body, .app {
+    min-height: 100vh;
+}
+
+.app__container {
     margin: 0;
     padding: $rem * 1.5;
     background-color: theme-color();
@@ -35,9 +40,29 @@ h1, h1, h3, h4, h5 {
     background-color: theme-color('primary', 'dark');
 }
 
-.dark {
+.app.dark {
+    @include darkThemeApp;
+}
+
+.dark .app__container {
     @include darkThemeApp;
     @include header-dark-theme;
     @include search-dark-theme;
     @include content-dark-theme;
 } 
+
+@include media-md {
+    .app__container {
+        padding: $rem * 2.5;
+    }
+    @include header-media-md;
+    @include search-media-md;
+    @include content-media-md;
+}
+
+@include media-lg {
+    .app__container {
+        margin: 0 auto;
+        width: 46rem;
+    }
+}
