@@ -34,6 +34,49 @@ header {
             line-height: 2rem;
         }
     }
+
+    .header__fontContainer{
+        position: relative;
+    }
+
+    .header__menu {
+        position: absolute;
+        border-radius: 1rem;
+        background-color: theme-color('primary', 'light');
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
+        z-index: 1;
+        top: 2rem;
+        left: -1.5rem;
+        padding: 1rem;
+        width: 5rem;
+        transition: all ease-in-out 200ms;
+
+        ul {
+            list-style: none;
+            padding-inline-start: 0;
+            margin: 0;
+
+            li {
+                margin-bottom: 0.5rem;
+                h3 {
+                    color: theme-color('secundary', 'light');
+                    font-size: 0.75rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 0.85rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: theme-color('standard', 'alternative')
+                    }
+                }
+
+                &:nth-last-child(1){
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
     
     .header__iconBtn {
         width: 0.4rem;
@@ -85,6 +128,19 @@ header {
                 color: theme-color("standard", 'alternative');
             }
         }
+
+        .header__menu {
+            background-color: theme-color('tertiary', 'dark');
+            box-shadow: 0px 5px 30px 0px theme-color('standard', 'alternative');
+
+            ul li h3 {
+                color: theme-color('secundary', 'dark');
+
+                &:hover {
+                    color: theme-color('standard', 'alternative')
+                }
+            }
+        }
     }
 }
 
@@ -117,6 +173,24 @@ header {
     
             .header__toggle-logo {
                 font-size: $rem * 1.8;
+            }
+        }
+
+        .header__menu {
+            top: 2.25rem;
+            left: -3rem;
+            padding: 1.5rem;
+            width: 7rem;
+    
+            ul {
+    
+                li {
+                    margin-bottom: 0.75rem;
+                    h3 {
+                        font-size: 1.125rem;
+                        line-height: 1.5rem;
+                    }
+                }
             }
         }
     }
