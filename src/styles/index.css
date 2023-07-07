@@ -29,6 +29,43 @@ header .header__fontBtn span {
   font-weight: 700;
   line-height: 2rem;
 }
+header .header__fontContainer {
+  position: relative;
+}
+header .header__menu {
+  position: absolute;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  top: 2rem;
+  left: -1.5rem;
+  padding: 1rem;
+  width: 5rem;
+  transition: all ease-in-out 200ms;
+}
+header .header__menu ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+header .header__menu ul li {
+  margin-bottom: 0.5rem;
+}
+header .header__menu ul li h3 {
+  color: #2D2D2D;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.85rem;
+  cursor: pointer;
+}
+header .header__menu ul li h3:hover {
+  color: #A445ED;
+}
+header .header__menu ul li:nth-last-child(1) {
+  margin-bottom: 0;
+}
 header .header__iconBtn {
   width: 0.4rem;
   height: 0.4rem;
@@ -78,6 +115,7 @@ header .header__toggle .header__toggle-logo {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  cursor: pointer;
 }
 .search input:focus {
   outline: none;
@@ -103,6 +141,7 @@ main section.main__section-title {
 }
 main section.main__section-title img {
   width: 3rem;
+  cursor: pointer;
 }
 main section.main__section-title div {
   display: flex;
@@ -182,7 +221,11 @@ main section.main__section .main__section-synonyms span {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  cursor: pointer;
   color: #A445ED;
+}
+main section.main__section .main__section-synonyms span:hover {
+  text-decoration: underline;
 }
 main section.main__section .main__section__list-item {
   font-size: 0.9375rem;
@@ -271,6 +314,29 @@ h1, h1, h3, h4, h5 {
   padding: 0;
 }
 
+.main__error {
+  text-align: center;
+  margin-top: 5rem;
+}
+.main__error img {
+  margin-bottom: 1.5rem;
+}
+.main__error h3 {
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #2D2D2D;
+}
+.main__error p {
+  color: #757575;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
 .app.dark {
   background-color: #050505;
 }
@@ -286,6 +352,16 @@ h1, h1, h3, h4, h5 {
   transform: rotate(180deg);
 }
 .dark .app__container header .header__toggle .header__toggle-logo {
+  color: #A445ED;
+}
+.dark .app__container header .header__menu {
+  background-color: #1F1F1F;
+  box-shadow: 0px 5px 30px 0px #A445ED;
+}
+.dark .app__container header .header__menu ul li h3 {
+  color: #fff;
+}
+.dark .app__container header .header__menu ul li h3:hover {
   color: #A445ED;
 }
 .dark .app__container .search input {
@@ -334,6 +410,19 @@ h1, h1, h3, h4, h5 {
   }
   header .header__toggle .header__toggle-logo {
     font-size: 1.8rem;
+  }
+  header .header__menu {
+    top: 2.25rem;
+    left: -3rem;
+    padding: 1.5rem;
+    width: 7rem;
+  }
+  header .header__menu ul li {
+    margin-bottom: 0.75rem;
+  }
+  header .header__menu ul li h3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
   }
   .search {
     margin: 3.2rem 0 2.7rem 0;
