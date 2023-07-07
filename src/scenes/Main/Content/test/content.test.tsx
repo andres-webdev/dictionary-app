@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom'
 import MainContent from "../MainContent";
+import DefinitionNotFound from "../DefinitionNotFound";
 
 describe("Content component", () => {
     test("Should render the main content", () => {
@@ -19,5 +20,17 @@ describe("Content component", () => {
         expect(newWindow).toBeInTheDocument()
         expect(sectionSubTitles.length).toBe(3)
         expect(subTitles.length).toBe(2)
+    })
+
+    test('Should render the defination not found page', () => {
+        render(<DefinitionNotFound />)
+
+        const badFaceImg = screen.getByAltText('img-emogi')
+        const subTitle = screen.getByRole('heading', { level: 3 })
+        const paragraph = screen.getByTestId('paragraph')
+
+        expect(badFaceImg).toBeInTheDocument()
+        expect(subTitle.textContent).toEqual('No Definitions Found')
+        expect(paragraph).toBeInTheDocument()
     })
 })
