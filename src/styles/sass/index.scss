@@ -3,6 +3,9 @@
 @import '../../scenes/Main/SearchBar/styles/sass/searchBar.scss';
 @import '../../scenes/Main/Content/styles/sass/mainContent.scss';
 @import './config';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap');
 
 body {
     margin: 0 auto;
@@ -15,9 +18,24 @@ body, .app {
 }
 
 .app__container {
-    margin: 0;
+    margin: 0 auto;
     padding: $rem * 1.5;
     background-color: theme-color();
+    font-family: 'Inter', sans-serif;
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        margin-top: 13rem
+    }
+
+    &.serif {
+        font-family: 'Lora', serif;
+    }
+
+    &.mono {
+        font-family: 'Inconsolata', monospace;
+    }
 }
 
 button {
@@ -29,6 +47,7 @@ button {
     line-height: normal;
     overflow: visible;
     padding: 0;
+    margin: 0;
 }
 
 h1, h1, h3, h4, h5 {
