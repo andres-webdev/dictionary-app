@@ -4,7 +4,11 @@ import SearchBar from "../SearchBar";
 
 describe("Search bar component", () => {
     test("Should render the search bar", () => {
-        render(<SearchBar />)
+        const keyword = 'hello'
+        const handleChange = jest.fn()
+        const handleSubmit= jest.fn()
+
+        render(<SearchBar keyword={keyword} handleChange={handleChange} handleSubmit={handleSubmit} />)
 
         const inputText = screen.getByRole('textbox')
         const searchIcon = screen.getByAltText("search-icon")

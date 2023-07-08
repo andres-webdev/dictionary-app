@@ -1,59 +1,31 @@
-export default function MainContent(){
+import { type DataContentType } from "../../../types"
+import AudioComponent from "./components/AudioComponent"
+import ContentSection from "./components/ContentSection"
+interface Props {
+    content: DataContentType
+}
+
+export default function MainContent({ content }: Props){
     return (
         <main>
             <section className="main__section-title">
                 <div>
-                    <h1>Keyword</h1>
-                    <span>/ˈkiːbɔːd/</span>
+                    <h1>{content[0].word}</h1>
+                    <span data-testid='phonetic'>{content[0].phonetics.text}</span>
                 </div>
-                <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331218/dictonary-api/icon-play_p9o8lp.svg" alt="play-botton" />
+                {
+                    content[0].phonetics.audio &&
+                    <AudioComponent audio={content[0].phonetics.audio} />
+                }
             </section>
-            <section className="main__section">
-                <div>
-                    <h3>noun</h3>
-                    <figure>
-                        <div className="separator"></div>
-                    </figure>
-                </div>
-                <h4>Meaning</h4>
-                <ul>
-                    <li><span>(etc.) A set of keys used to operate a typewriter, computer etc.</span></li>
-                    <li><span>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</span></li>
-                    <li><span>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</span></li>
-                </ul>
-
-                <div className="main__section-synonyms">
-                    <h4 className="title">Synonyms</h4>
-                    <span>electronic keyboard</span>
-                </div>
-                
-            </section>
-            <section className="main__section">
-                <div>
-                    <h3>verb</h3>
-                    <figure>
-                        <div className="separator"></div>
-                    </figure>
-                </div>
-                <h4>Meaning</h4>
-                <ul>
-                    <li><span>To type on a computer keyboard.</span></li>
-                    <li className="main__section__list-item">“Keyboarding is the part of this job I hate the most.”</li>
-                </ul>
-                <figure>
-                    <div className="separator"></div>
-                </figure>
-            </section>
+            <ContentSection content={[content[0].meanings[0]]} nameSection="noun" />
+            <ContentSection content={[content[0].meanings[1] || []]} nameSection="verb" />
             <section className="main__section-sources">
                 <h5>Source</h5>
-                <ul>
-                    <li>
-                        <a href="https://en.wiktionary.org/wiki/keyboard" target="blank">
-                            <span>https://en.wiktionary.org/wiki/keyboard</span>
-                            <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/icon-new-window_oapxef.svg" alt="new-window" />
-                        </a>
-                    </li>
-                </ul>
+                <a href={content[0].sourceUrls[0]} target="blank">
+                    <span>{content[0].sourceUrls[0]}</span>
+                    <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/icon-new-window_oapxef.svg" alt="new-window" />
+                </a>
             </section>
         </main>
     )

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap");
 header {
   display: flex;
   flex-direction: row;
@@ -25,9 +28,45 @@ header .header__fontBtn {
 header .header__fontBtn span {
   color: #2D2D2D;
   font-size: 0.875rem;
-  font-family: Inter;
   font-weight: 700;
   line-height: 2rem;
+}
+header .header__fontContainer {
+  position: relative;
+}
+header .header__menu {
+  position: absolute;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  top: 2rem;
+  left: -1.5rem;
+  padding: 1rem;
+  width: 5rem;
+  transition: all ease-in-out 200ms;
+}
+header .header__menu ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+header .header__menu ul li {
+  margin-bottom: 0.5rem;
+}
+header .header__menu ul li h3 {
+  color: #2D2D2D;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.85rem;
+  cursor: pointer;
+}
+header .header__menu ul li h3:hover {
+  color: #A445ED;
+}
+header .header__menu ul li:nth-last-child(1) {
+  margin-bottom: 0;
 }
 header .header__iconBtn {
   width: 0.4rem;
@@ -64,29 +103,39 @@ header .header__toggle .header__toggle-logo {
   margin: 1.5rem 0;
   height: 3rem;
 }
+.search form, .search label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 .search input {
   display: inline-block;
   width: 100%;
-  height: 3rem;
-  padding-left: 1.5rem;
+  text-indent: 1.5rem;
   border-radius: 1rem;
   border: none;
   background-color: #F4F4F4;
   color: #2D2D2D;
   font-size: 1rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  font-family: inherit;
+  padding-right: 3rem;
+  cursor: pointer;
 }
 .search input:focus {
   outline: none;
   border: solid 1.5px #A445ED;
 }
-.search img {
+.search button {
   position: absolute;
-  right: 1.53rem;
-  top: 1rem;
+  right: 2px;
+  top: 2px;
+  height: 90%;
+  width: auto;
+  border-radius: 0 1rem 1rem 0;
+  padding: 0 1.2rem 0 0.5rem;
 }
 
 main {
@@ -99,10 +148,11 @@ main section.main__section-title {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 1.81rem;
+  margin: 0 0 1.81rem 0;
 }
 main section.main__section-title img {
   width: 3rem;
+  cursor: pointer;
 }
 main section.main__section-title div {
   display: flex;
@@ -113,17 +163,17 @@ main section.main__section-title div {
 main section.main__section-title div h1 {
   color: #2D2D2D;
   font-size: 2rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-transform: capitalize;
 }
 main section.main__section-title div span {
   font-size: 1.125rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5rem;
+  min-height: 1.5rem;
   color: #A445ED;
 }
 main section.main__section div {
@@ -134,7 +184,6 @@ main section.main__section div {
 }
 main section.main__section div h3 {
   font-size: 1.125rem;
-  font-family: Inter;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
@@ -142,7 +191,6 @@ main section.main__section div h3 {
 }
 main section.main__section h4 {
   font-size: 1rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -156,7 +204,6 @@ main section.main__section ul {
 main section.main__section ul li {
   padding-left: 0.25rem;
   font-size: 0.9375rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5rem;
@@ -170,28 +217,29 @@ main section.main__section .main__section-synonyms {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0 2rem 0;
+  gap: 0.85rem;
 }
 main section.main__section .main__section-synonyms .title {
   margin-top: 0;
 }
 main section.main__section .main__section-synonyms span {
   font-size: 1rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  cursor: pointer;
   color: #A445ED;
 }
-main section.main__section .main__section__list-item {
-  font-size: 0.9375rem;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5rem;
-  list-style: none;
-  color: #757575;
+main section.main__section .main__section-synonyms span a {
+  text-decoration: none;
+}
+main section.main__section .main__section-synonyms span a:visited, main section.main__section .main__section-synonyms span a:link {
+  color: #A445ED;
+}
+main section.main__section .main__section-synonyms span a:hover {
+  text-decoration: underline;
 }
 main figure {
   margin: 0;
@@ -206,36 +254,34 @@ main figure .separator {
   width: 100%;
   border-top: solid 1px #E9E9E9;
 }
+main section.main__section-sources {
+  margin-top: 1rem;
+}
 main section.main__section-sources h5 {
   font-size: 0.875rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-decoration-line: underline;
   color: #757575;
+  margin-bottom: 0.5rem;
 }
-main section.main__section-sources ul {
-  padding-inline-start: 0;
-}
-main section.main__section-sources ul li {
-  list-style: none;
-  display: inline-block;
-}
-main section.main__section-sources ul li a {
+main section.main__section-sources a {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
-main section.main__section-sources ul li a span {
+main section.main__section-sources a span {
   font-size: 0.875rem;
-  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-color: #757575;
+  color: #2D2D2D;
+}
+main section.main__section-sources a:visited, main section.main__section-sources a:link {
   color: #2D2D2D;
 }
 
@@ -250,9 +296,21 @@ body, .app {
 }
 
 .app__container {
-  margin: 0;
+  margin: 0 auto;
   padding: 1.5rem;
   background-color: #fff;
+  font-family: "Inter", sans-serif;
+}
+.app__container .loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 13rem;
+}
+.app__container.serif {
+  font-family: "Lora", serif;
+}
+.app__container.mono {
+  font-family: "Inconsolata", monospace;
 }
 
 button {
@@ -264,11 +322,35 @@ button {
   line-height: normal;
   overflow: visible;
   padding: 0;
+  margin: 0;
 }
 
 h1, h1, h3, h4, h5 {
   margin: 0;
   padding: 0;
+}
+
+.main__error {
+  text-align: center;
+  margin-top: 5rem;
+}
+.main__error img {
+  margin-bottom: 1.5rem;
+}
+.main__error h3 {
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #2D2D2D;
+}
+.main__error p {
+  color: #757575;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .app.dark {
@@ -288,6 +370,16 @@ h1, h1, h3, h4, h5 {
 .dark .app__container header .header__toggle .header__toggle-logo {
   color: #A445ED;
 }
+.dark .app__container header .header__menu {
+  background-color: #1F1F1F;
+  box-shadow: 0px 5px 30px 0px #A445ED;
+}
+.dark .app__container header .header__menu ul li h3 {
+  color: #fff;
+}
+.dark .app__container header .header__menu ul li h3:hover {
+  color: #A445ED;
+}
 .dark .app__container .search input {
   background-color: #1F1F1F;
   color: #fff;
@@ -304,7 +396,10 @@ h1, h1, h3, h4, h5 {
 .dark .app__container main figure .separator {
   border-top: solid 1px #3A3A3A;
 }
-.dark .app__container main section.main__section-sources ul li span {
+.dark .app__container main section.main__section-sources a span {
+  color: #fff;
+}
+.dark .app__container main section.main__section-sources a:link, .dark .app__container main section.main__section-sources a:visited {
   color: #fff;
 }
 
@@ -335,14 +430,31 @@ h1, h1, h3, h4, h5 {
   header .header__toggle .header__toggle-logo {
     font-size: 1.8rem;
   }
+  header .header__menu {
+    top: 2.25rem;
+    left: -3rem;
+    padding: 1.5rem;
+    width: 7rem;
+  }
+  header .header__menu ul li {
+    margin-bottom: 0.75rem;
+  }
+  header .header__menu ul li h3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
   .search {
     margin: 3.2rem 0 2.7rem 0;
   }
   .search input {
     font-size: 1.25rem;
+    padding: 2rem 3.5rem 2rem 0;
+  }
+  .search button {
+    top: 12px;
   }
   main section.main__section-title {
-    margin-bottom: 2.5rem;
+    margin: 3.5rem 0 2.5rem 0;
   }
   main section.main__section-title img {
     width: 4rem;
@@ -379,14 +491,13 @@ h1, h1, h3, h4, h5 {
   main section.main__section .main__section-synonyms span {
     font-size: 1.25rem;
   }
-  main section.main__section .main__section__list-item {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-  }
   main section.main__section-sources {
     display: flex;
     align-items: center;
     gap: 1.25rem;
+  }
+  main section.main__section-sources h5 {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
