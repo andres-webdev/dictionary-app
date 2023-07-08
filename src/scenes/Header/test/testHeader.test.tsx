@@ -1,7 +1,7 @@
 import {screen, render} from '@testing-library/react'
 import "@testing-library/jest-dom"
 import Header from '../Header'
-import HeaderFontMenu from '../HeaderFontMenu'
+import HeaderFontMenu from '../components/HeaderFontMenu'
 import userEvent from '@testing-library/user-event'
 
 const fontOptions = {
@@ -12,7 +12,12 @@ const fontOptions = {
 
 describe("Header section", () => {
     test("should render the header component", () => {
-        render(<Header />)
+
+        const toggleChange = jest.fn()
+        const fontChange = jest.fn()
+        const fontFamily = 'Mono'
+
+        render(<Header toggleChange={toggleChange} fontChange={fontChange} fontFamily={fontFamily} />)
 
         const logo = screen.getByAltText("logo-app")
         const [fontBtn, toggleBtn] = screen.getAllByRole("button")
@@ -26,7 +31,10 @@ describe("Header section", () => {
 
     test("should render the font menu card component", () => {
 
-        render(<HeaderFontMenu />)
+        const fontChange = jest.fn() 
+        const showFontMenu = jest.fn()
+
+        render(<HeaderFontMenu fontChange={fontChange} showFontMenu={showFontMenu} />)
 
         const fonts = screen.getAllByRole('heading', { level: 3 })
 
@@ -41,8 +49,12 @@ describe("Header section", () => {
     test("should render the font menu card component after the user click the menu botton", async () => {
 
         const user = userEvent.setup()
+        const toggleChange = jest.fn()
+        const fontChange = jest.fn()
+        const fontFamily = 'Mono'
 
-        render(<Header />)
+        render(<Header toggleChange={toggleChange} fontChange={fontChange} fontFamily={fontFamily} />)
+
 
         const buttons = screen.getByTestId('font-menu-btn')
         const fontMenu = screen.queryByTestId('fonts-menu')
@@ -52,7 +64,12 @@ describe("Header section", () => {
         await user.click(buttons)
 
         const showFontMenu = screen.getByTestId('fonts-menu')
+        const fonts = screen.getAllByRole('heading', { level: 3 })
 
         expect(showFontMenu).toBeInTheDocument()
+
+        await user.click(fonts[0])
+
+        expect(showFontMenu).not.toBeInTheDocument()
     })
 }) 

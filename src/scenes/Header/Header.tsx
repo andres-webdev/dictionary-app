@@ -1,9 +1,16 @@
 import { useState } from 'react'
 import { IoToggleSharp } from "react-icons/io5";
 import { HiOutlineMoon } from "react-icons/hi";
-import HeaderFontMenu from "./HeaderFontMenu";
+import HeaderFontMenu from "./components/HeaderFontMenu";
+import { FontOptions } from '../../types';
 
-export default function Header(){
+interface Props {
+    toggleChange: () => void
+    fontChange: (font: FontOptions) => void
+    fontFamily: FontOptions
+}
+
+export default function Header({ toggleChange, fontChange, fontFamily }: Props){
 
     const [showFontMenu, setShowFontMenu] = useState(false)
 
@@ -22,17 +29,17 @@ export default function Header(){
                             data-testid="font-menu-btn"
                             onClick={handleChangeFontMenuBtn}
                             >
-                            <span>Sans Serif</span> 
+                            <span>{fontFamily}</span> 
                             <figure
                                 className="header__iconBtn">
                             </figure>
                         </button>
                         {
-                            showFontMenu && <HeaderFontMenu />
+                            showFontMenu && <HeaderFontMenu fontChange={fontChange} showFontMenu={handleChangeFontMenuBtn} />
                         }
                     </div>
                     <div className="header__toggle">
-                        <button>
+                        <button onClick={toggleChange}>
                             <IoToggleSharp className="header__toggle-btn" />
                         </button>
                         <HiOutlineMoon className="header__toggle-logo" data-testid="toggle-icon" />
