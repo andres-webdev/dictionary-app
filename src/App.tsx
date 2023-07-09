@@ -32,26 +32,29 @@ function App() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    setRequest('loading')
+    if(keyword !== ''){
+      setRequest('loading')
+    }
   }
 
   useEffect(() => {
 
     const handleRequestApi = async () => {
-      if(request === 'loading'){
+      if(keyword !== '' && request === 'loading'){
         try {
-          if(keyword !== ''){
-            const response = await requestApi({ keyword: keyword })
+          const response = await requestApi({ keyword: keyword })
 
-            const dataFormated = formatData(response.data)
-            setContent(dataFormated)
-            setRequest('success')
-            setRequest('idle')
-          }
+          const dataFormated = formatData(response.data)
+          setContent(dataFormated)
+          setRequest('success')
         } catch (error) {
           console.log(error)
           setRequest('error')
           setContent(emptyMockObject)
+        }
+      } else {
+        if(request !== 'error'){
+          setRequest('idle')
         }
       }
     }

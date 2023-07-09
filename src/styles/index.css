@@ -40,10 +40,10 @@ header .header__menu {
   background-color: #fff;
   box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  top: 2rem;
-  left: -1.5rem;
+  top: 2.3rem;
+  left: -2rem;
   padding: 1rem;
-  width: 5rem;
+  width: 5.5rem;
   transition: all ease-in-out 200ms;
 }
 header .header__menu ul {
@@ -52,14 +52,14 @@ header .header__menu ul {
   margin: 0;
 }
 header .header__menu ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 header .header__menu ul li h3 {
   color: #2D2D2D;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 0.85rem;
+  line-height: 0.925rem;
   cursor: pointer;
 }
 header .header__menu ul li h3:hover {
@@ -127,6 +127,19 @@ header .header__toggle .header__toggle-logo {
 .search input:focus {
   outline: none;
   border: solid 1.5px #A445ED;
+}
+.search input.search__input-error {
+  border: solid 1.5px #FF5252;
+}
+.search .search__input-message {
+  color: #FF5252;
+  font-size: 0.74rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  top: 3.2rem;
+  left: 0.3rem;
 }
 .search button {
   position: absolute;
@@ -338,7 +351,6 @@ h1, h1, h3, h4, h5 {
   margin-bottom: 1.5rem;
 }
 .main__error h3 {
-  font-family: Inter;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
@@ -356,9 +368,15 @@ h1, h1, h3, h4, h5 {
 .app.dark {
   background-color: #050505;
 }
+.app.dark .main__error h3 {
+  color: #fff;
+}
 
 .dark .app__container {
   background-color: #050505;
+}
+.dark .app__container .main__error h3 {
+  color: #fff;
 }
 .dark .app__container header .header__fontBtn span {
   color: #fff;
@@ -452,6 +470,11 @@ h1, h1, h3, h4, h5 {
   }
   .search button {
     top: 12px;
+  }
+  .search .search__input-message {
+    top: 4.65rem;
+    left: 0.2rem;
+    font-size: 1rem;
   }
   main section.main__section-title {
     margin: 3.5rem 0 2.5rem 0;

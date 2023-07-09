@@ -30,7 +30,7 @@ interface ContentType {
         name: string,
         url: string
     },
-    sourceUrls: string[] | string
+    sourceUrls: string
 }
 
 export type FontOptions = "Sans serif" | 'Serif' | 'Mono'

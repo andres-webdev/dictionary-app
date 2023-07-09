@@ -42,9 +42,7 @@ export const mockObject = {
       "name": "CC BY-SA 3.0",
       "url": "https://creativecommons.org/licenses/by-sa/3.0"
   },
-  "sourceUrls": [
-      "https://en.wiktionary.org/wiki/hello"
-  ]
+  "sourceUrls": "https://en.wiktionary.org/wiki/hello"
 }
 
 export const emptyMockObject = {
@@ -91,7 +89,5 @@ export const emptyMockObject = {
         "name": "",
         "url": ""
     },
-    "sourceUrls": [
-        ""
-    ]
+    "sourceUrls": ""
   }

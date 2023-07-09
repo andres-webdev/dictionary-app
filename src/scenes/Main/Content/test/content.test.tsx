@@ -58,7 +58,7 @@ describe("Content component", () => {
         const wordTitle = screen.getByRole('heading', {level: 1})
         const fonetic = screen.getByTestId("phonetic")
         const newWindow = screen.getByAltText("new-window")
-        const articleLink = screen.getByText(mockObject.sourceUrls[0])
+        const articleLink = screen.getByText(mockObject.sourceUrls)
 
         expect(wordTitle).toBeInTheDocument()
         expect(fonetic).toBeInTheDocument()
