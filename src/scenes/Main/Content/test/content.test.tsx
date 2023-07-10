@@ -40,12 +40,12 @@ describe("Content component", () => {
 
         render(<ContentSection content={mockObject.meanings} nameSection="noun" />)
 
-        const sectionSubTitles = screen.getAllByRole('heading', {level: 4})
+        const sectionSubTitles = screen.getAllByRole('heading')
         const subTitles = screen.getByRole('heading', {level: 3})
         const synonymsLink = screen.getAllByRole('link')
         const listItems = screen.getAllByRole('listitem')
 
-        expect(sectionSubTitles.length).toBe(2)
+        expect(sectionSubTitles.length).toBe(3)
         expect(subTitles.textContent).toEqual(mockObject.meanings[0].partOfSpeech)
         expect(synonymsLink[0].textContent).toEqual(mockObject.meanings[0].synonyms[0])
         expect(listItems[0].textContent).toEqual(mockObject.meanings[0].definitions[0].definition)

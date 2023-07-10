@@ -19,7 +19,7 @@ export default function ContentSection({ nameSection, content = [] }: Props) {
                   <div className="separator"></div>
               </figure>
           </div>
-          <div><h4>Meaning</h4></div>
+          <h2>Meaning</h2>
           <ContentMeaningList content={content} />
           <ContentSynonymsList content={content} />
         </section>

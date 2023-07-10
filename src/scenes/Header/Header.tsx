@@ -25,7 +25,7 @@ export default function Header({ toggleChange, fontChange, fontFamily }: Props){
                 <div> 
                     <div className='header__fontContainer'>
                         <button 
-                            name='toggle-theme'
+                            name='font-toggle'
                             className="header__fontBtn" 
                             data-testid="font-menu-btn"
                             onClick={handleChangeFontMenuBtn}
@@ -40,7 +40,7 @@ export default function Header({ toggleChange, fontChange, fontFamily }: Props){
                         }
                     </div>
                     <div className="header__toggle">
-                        <button onClick={toggleChange}>
+                        <button onClick={toggleChange} name='toggle-theme'>
                             <IoToggleSharp className="header__toggle-btn" />
                         </button>
                         <HiOutlineMoon className="header__toggle-logo" data-testid="toggle-icon" />
