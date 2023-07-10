@@ -25,8 +25,8 @@ export default function Header({ toggleChange, fontChange, fontFamily }: Props){
                 <div> 
                     <div className='header__fontContainer'>
                         <button 
-                            name='font-toggle'
-                            id='font-toggle'
+                            id="fontToggle" 
+                            aria-label="fontToggleBtn"
                             className="header__fontBtn" 
                             data-testid="font-menu-btn"
                             onClick={handleChangeFontMenuBtn}
@@ -41,7 +41,7 @@ export default function Header({ toggleChange, fontChange, fontFamily }: Props){
                         }
                     </div>
                     <div className="header__toggle">
-                        <button onClick={toggleChange} name='toggle-theme' id='toggle-theme'>
+                        <button onClick={toggleChange} id="toggleTheme" aria-label="toggleBtn">
                             <IoToggleSharp className="header__toggle-btn" />
                         </button>
                         <HiOutlineMoon className="header__toggle-logo" data-testid="toggle-icon" />
