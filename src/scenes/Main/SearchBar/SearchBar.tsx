@@ -30,8 +30,11 @@ export default function SearchBar({ keyword, handleChange, handleSubmit }: Props
                         value={keyword}
                         placeholder="Write here..." />
                 </label>
-                <button data-testid='submit-btn'>
-                    <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/icon-search_jgvnfe.svg" alt="search-icon" />
+                <button data-testid='submit-btn' name='search-btn'>
+                    <img 
+                        src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/icon-search_jgvnfe.svg" alt="search-icon"
+                        width={18}
+                        height={18} />
                 </button>
                 {
                     showErrorMsg &&

@@ -24,7 +24,11 @@ export default function MainContent({ content }: Props){
                 <h5>Source</h5>
                 <a href={content[0].sourceUrls} target="blank">
                     <span>{content[0].sourceUrls}</span>
-                    <img src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/icon-new-window_oapxef.svg" alt="new-window" />
+                    <img 
+                        src="https://res.cloudinary.com/dp3chx1yj/image/upload/v1688331217/dictonary-api/icon-new-window_oapxef.svg" alt="new-window"
+                        width={14}
+                        height={14}
+                     />
                 </a>
             </section>
         </main>

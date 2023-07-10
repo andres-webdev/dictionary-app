@@ -25,6 +25,7 @@ export default function Header({ toggleChange, fontChange, fontFamily }: Props){
                 <div> 
                     <div className='header__fontContainer'>
                         <button 
+                            name='toggle-theme'
                             className="header__fontBtn" 
                             data-testid="font-menu-btn"
                             onClick={handleChangeFontMenuBtn}
