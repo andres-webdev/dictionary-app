@@ -10,10 +10,10 @@ export default function ContentSynonymsList({ content = [] }: Props){
       {
         content[0].synonyms.length !== 0 && content[0].partOfSpeech === 'noun' &&
         <div className="main__section-synonyms">
-            <h4 className="title">Synonyms</h4>
+            <span className="title">Synonyms</span>
             {
                 content[0].synonyms.map((elem: string, index: number) => (
-                    <span key={index}>
+                    <span key={index} className="item">
                         <a href={`https://en.wiktionary.org/wiki/${elem}`} target="blank">{elem}</a>
                     </span>
                 ))

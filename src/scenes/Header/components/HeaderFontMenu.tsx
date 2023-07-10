@@ -30,7 +30,7 @@ export default function HeaderFontMenu({ fontChange, showFontMenu }: Props){
       {
         Object.values(fontOptions).map((value: FontOptions) => (
           <li key={value} className="header__menu-option" onClick={() => handleClickFontOption(value)}>
-            <h3>{value}</h3>
+            <span>{value}</span>
           </li>
         ))
       }

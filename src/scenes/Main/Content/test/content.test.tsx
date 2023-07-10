@@ -12,7 +12,7 @@ describe("Content component", () => {
         render(<DefinitionNotFound />)
 
         const badFaceImg = screen.getByAltText('img-emogi')
-        const subTitle = screen.getByRole('heading', { level: 3 })
+        const subTitle = screen.getByRole('heading', { level: 2 })
         const paragraph = screen.getByTestId('paragraph')
 
         expect(badFaceImg).toBeInTheDocument()
@@ -40,12 +40,12 @@ describe("Content component", () => {
 
         render(<ContentSection content={mockObject.meanings} nameSection="noun" />)
 
-        const sectionSubTitles = screen.getAllByRole('heading')
-        const subTitles = screen.getByRole('heading', {level: 3})
+        const sectionSubTitles = screen.getAllByRole('listitem')
+        const subTitles = screen.getByRole('heading', {level: 2})
         const synonymsLink = screen.getAllByRole('link')
         const listItems = screen.getAllByRole('listitem')
 
-        expect(sectionSubTitles.length).toBe(3)
+        expect(sectionSubTitles[0].textContent).toBe(mockObject.meanings[0].definitions[0].definition)
         expect(subTitles.textContent).toEqual(mockObject.meanings[0].partOfSpeech)
         expect(synonymsLink[0].textContent).toEqual(mockObject.meanings[0].synonyms[0])
         expect(listItems[0].textContent).toEqual(mockObject.meanings[0].definitions[0].definition)

@@ -14,12 +14,12 @@ export default function ContentSection({ nameSection, content = [] }: Props) {
         content.find(elem => elem.partOfSpeech === nameSection) &&
         <section className="main__section">
           <div>
-              <h3>{nameSection}</h3>
+              <h2>{nameSection}</h2>
               <figure>
                   <div className="separator"></div>
               </figure>
           </div>
-          <h2>Meaning</h2>
+          <span className="main__section__divider">Meaning</span>
           <ContentMeaningList content={content} />
           <ContentSynonymsList content={content} />
         </section>

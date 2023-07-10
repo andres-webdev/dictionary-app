@@ -36,7 +36,7 @@ describe("Header section", () => {
 
         render(<HeaderFontMenu fontChange={fontChange} showFontMenu={showFontMenu} />)
 
-        const fonts = screen.getAllByRole('heading', { level: 3 })
+        const fonts = screen.getAllByRole('listitem')
 
         const fontsMenu = fonts.map(elem => elem.textContent)
 
@@ -64,7 +64,7 @@ describe("Header section", () => {
         await user.click(buttons)
 
         const showFontMenu = screen.getByTestId('fonts-menu')
-        const fonts = screen.getAllByRole('heading', { level: 3 })
+        const fonts = screen.getAllByRole('listitem')
 
         expect(showFontMenu).toBeInTheDocument()
 

@@ -45,13 +45,16 @@ main {
     // Secion noun and verb
     section.main__section {
 
+        display: flex;
+        flex-direction: column;
+
         div {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 1rem;
 
-            h3 {
+            h2 {
                 font-size: 1.125rem;
                 font-style: italic;
                 font-weight: 700;
@@ -60,13 +63,14 @@ main {
             } 
         }
         
-        h4 {
+        .main__section__divider {
             font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             color: theme-color("standard", "base");
-            margin-top: 1.5rem;
+            margin: 1.5rem 0 0 0;
+            padding: 0;
         }
 
         ul {
@@ -100,7 +104,7 @@ main {
                 margin-top: 0;
             }
 
-            span {
+            .item {
                 font-size: 1rem;
                 font-style: normal;
                 font-weight: 700;
@@ -139,9 +143,11 @@ main {
 
     section.main__section-sources {
 
+        display: flex;
+        flex-direction: column;
         margin-top: 1rem;
 
-        h5 {
+        .subtitle {
             font-size: 0.875rem;
             font-style: normal;
             font-weight: 400;
@@ -157,7 +163,7 @@ main {
             align-items: center;
             gap: 0.5rem;
             
-            span{
+            .link{
                 font-size: 0.875rem;
                 font-style: normal;
                 font-weight: 400;
@@ -187,7 +193,7 @@ main {
         // Secion noun and verb
         section.main__section {
             div {
-                h3 {
+                h2 {
                     color: theme-color("secundary", "dark");
                 } 
             }
@@ -213,7 +219,7 @@ main {
         section.main__section-sources {
 
             a {
-                span{
+                .link{
                     color: theme-color("secundary", "dark");
                 }
 
@@ -252,12 +258,12 @@ main {
             div {
                 gap: 1.25rem;
     
-                h3 {
+                h2 {
                     font-size: 1.5rem;                    font-family: Inter;
                 } 
             }
             
-            h4 {
+            &.main__section__divider {
                 font-size: 1.25rem;
                 margin-top: 2.5rem;
             }
@@ -275,18 +281,17 @@ main {
             .main__section-synonyms {
                 margin: 2rem 0 2.5rem 0;
     
-                span {
+                .item {
                     font-size: 1.25rem;
                 }
             }
         }
     
         section.main__section-sources {
-            display: flex;
-            align-items: center;
+            flex-direction: row;
             gap: 1.25rem;
 
-            h5 {
+            .subtitle {
                 margin-bottom: 0;
             }
         }

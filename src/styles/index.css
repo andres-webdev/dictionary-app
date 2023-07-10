@@ -189,26 +189,31 @@ main section.main__section-title div span {
   min-height: 1.5rem;
   color: #A445ED;
 }
+main section.main__section {
+  display: flex;
+  flex-direction: column;
+}
 main section.main__section div {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
 }
-main section.main__section div h3 {
+main section.main__section div h2 {
   font-size: 1.125rem;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
   color: #2D2D2D;
 }
-main section.main__section h4 {
+main section.main__section .main__section__divider {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: #757575;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
 }
 main section.main__section ul {
   margin-top: 1rem;
@@ -237,7 +242,7 @@ main section.main__section .main__section-synonyms {
 main section.main__section .main__section-synonyms .title {
   margin-top: 0;
 }
-main section.main__section .main__section-synonyms span {
+main section.main__section .main__section-synonyms .item {
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
@@ -245,13 +250,13 @@ main section.main__section .main__section-synonyms span {
   cursor: pointer;
   color: #A445ED;
 }
-main section.main__section .main__section-synonyms span a {
+main section.main__section .main__section-synonyms .item a {
   text-decoration: none;
 }
-main section.main__section .main__section-synonyms span a:visited, main section.main__section .main__section-synonyms span a:link {
+main section.main__section .main__section-synonyms .item a:visited, main section.main__section .main__section-synonyms .item a:link {
   color: #A445ED;
 }
-main section.main__section .main__section-synonyms span a:hover {
+main section.main__section .main__section-synonyms .item a:hover {
   text-decoration: underline;
 }
 main figure {
@@ -268,9 +273,11 @@ main figure .separator {
   border-top: solid 1px #E9E9E9;
 }
 main section.main__section-sources {
+  display: flex;
+  flex-direction: column;
   margin-top: 1rem;
 }
-main section.main__section-sources h5 {
+main section.main__section-sources .subtitle {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
@@ -285,7 +292,7 @@ main section.main__section-sources a {
   align-items: center;
   gap: 0.5rem;
 }
-main section.main__section-sources a span {
+main section.main__section-sources a .link {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
@@ -338,7 +345,7 @@ button {
   margin: 0;
 }
 
-h1, h1, h3, h4, h5 {
+h1, h2 {
   margin: 0;
   padding: 0;
 }
@@ -350,7 +357,7 @@ h1, h1, h3, h4, h5 {
 .main__error img {
   margin-bottom: 1.5rem;
 }
-.main__error h3 {
+.main__error h2 {
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
@@ -405,7 +412,7 @@ h1, h1, h3, h4, h5 {
 .dark .app__container main section.main__section-title div h1 {
   color: #fff;
 }
-.dark .app__container main section.main__section div h3 {
+.dark .app__container main section.main__section div h2 {
   color: #fff;
 }
 .dark .app__container main section.main__section ul li span {
@@ -414,7 +421,7 @@ h1, h1, h3, h4, h5 {
 .dark .app__container main figure .separator {
   border-top: solid 1px #3A3A3A;
 }
-.dark .app__container main section.main__section-sources a span {
+.dark .app__container main section.main__section-sources a .link {
   color: #fff;
 }
 .dark .app__container main section.main__section-sources a:link, .dark .app__container main section.main__section-sources a:visited {
@@ -492,11 +499,11 @@ h1, h1, h3, h4, h5 {
   main section.main__section div {
     gap: 1.25rem;
   }
-  main section.main__section div h3 {
+  main section.main__section div h2 {
     font-size: 1.5rem;
     font-family: Inter;
   }
-  main section.main__section h4 {
+  main section.main__section.main__section__divider {
     font-size: 1.25rem;
     margin-top: 2.5rem;
   }
@@ -511,15 +518,14 @@ h1, h1, h3, h4, h5 {
   main section.main__section .main__section-synonyms {
     margin: 2rem 0 2.5rem 0;
   }
-  main section.main__section .main__section-synonyms span {
+  main section.main__section .main__section-synonyms .item {
     font-size: 1.25rem;
   }
   main section.main__section-sources {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     gap: 1.25rem;
   }
-  main section.main__section-sources h5 {
+  main section.main__section-sources .subtitle {
     margin-bottom: 0;
   }
 }
