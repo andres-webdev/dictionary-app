@@ -57,7 +57,7 @@ header {
 
             li {
                 margin-bottom: 1.25rem;
-                h3 {
+                span {
                     color: theme-color('secundary', 'light');
                     font-size: 0.9rem;
                     font-style: normal;
@@ -132,7 +132,7 @@ header {
             background-color: theme-color('tertiary', 'dark');
             box-shadow: 0px 5px 30px 0px theme-color('standard', 'alternative');
 
-            ul li h3 {
+            ul li span {
                 color: theme-color('secundary', 'dark');
 
                 &:hover {
@@ -185,7 +185,7 @@ header {
     
                 li {
                     margin-bottom: 0.75rem;
-                    h3 {
+                    span {
                         font-size: 1.125rem;
                         line-height: 1.5rem;
                     }

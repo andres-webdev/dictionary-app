@@ -10,7 +10,7 @@ export default function ContentSynonymsList({ content = [] }: Props){
       {
         content[0].synonyms.length !== 0 && content[0].partOfSpeech === 'noun' &&
         <div className="main__section-synonyms">
-            <span className="title">Synonyms</span>
+            <span className="subtitle">Synonyms</span>
             {
                 content[0].synonyms.map((elem: string, index: number) => (
                     <span key={index} className="item">

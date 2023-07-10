@@ -54,7 +54,7 @@ header .header__menu ul {
 header .header__menu ul li {
   margin-bottom: 1.25rem;
 }
-header .header__menu ul li h3 {
+header .header__menu ul li span {
   color: #2D2D2D;
   font-size: 0.9rem;
   font-style: normal;
@@ -62,7 +62,7 @@ header .header__menu ul li h3 {
   line-height: 0.925rem;
   cursor: pointer;
 }
-header .header__menu ul li h3:hover {
+header .header__menu ul li span:hover {
   color: #A445ED;
 }
 header .header__menu ul li:nth-last-child(1) {
@@ -239,8 +239,9 @@ main section.main__section .main__section-synonyms {
   margin: 2rem 0 2rem 0;
   gap: 0.85rem;
 }
-main section.main__section .main__section-synonyms .title {
+main section.main__section .main__section-synonyms .subtitle {
   margin-top: 0;
+  color: #757575;
 }
 main section.main__section .main__section-synonyms .item {
   font-size: 1rem;
@@ -375,14 +376,14 @@ h1, h2 {
 .app.dark {
   background-color: #050505;
 }
-.app.dark .main__error h3 {
+.app.dark .main__error h2 {
   color: #fff;
 }
 
 .dark .app__container {
   background-color: #050505;
 }
-.dark .app__container .main__error h3 {
+.dark .app__container .main__error h2 {
   color: #fff;
 }
 .dark .app__container header .header__fontBtn span {
@@ -399,10 +400,10 @@ h1, h2 {
   background-color: #1F1F1F;
   box-shadow: 0px 5px 30px 0px #A445ED;
 }
-.dark .app__container header .header__menu ul li h3 {
+.dark .app__container header .header__menu ul li span {
   color: #fff;
 }
-.dark .app__container header .header__menu ul li h3:hover {
+.dark .app__container header .header__menu ul li span:hover {
   color: #A445ED;
 }
 .dark .app__container .search input {
@@ -464,7 +465,7 @@ h1, h2 {
   header .header__menu ul li {
     margin-bottom: 0.75rem;
   }
-  header .header__menu ul li h3 {
+  header .header__menu ul li span {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
@@ -501,7 +502,6 @@ h1, h2 {
   }
   main section.main__section div h2 {
     font-size: 1.5rem;
-    font-family: Inter;
   }
   main section.main__section.main__section__divider {
     font-size: 1.25rem;
