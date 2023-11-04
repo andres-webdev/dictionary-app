@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Project - Card form](https://andresmfdev.github.io/card-form/)
+- Live Site URL: [Project - Dictionary](https://andresmfdev.github.io/dictionary-app/)
 
 ## My process
 
