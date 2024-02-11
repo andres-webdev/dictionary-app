@@ -1,4 +1,4 @@
-@import '../../../../styles/sass/variables'; 
+@import '../../../../styles/sass/variables';
 
 header {
     display: flex;
@@ -25,7 +25,7 @@ header {
         gap: $rem;
         padding-right: $rem;
         border-right: solid 1px theme-color('quaternary', 'light');
-    
+
         span {
             color: theme-color('secundary', 'light');
             font-size: 0.875rem;
@@ -34,7 +34,7 @@ header {
         }
     }
 
-    .header__fontContainer{
+    .header__fontContainer {
         position: relative;
     }
 
@@ -43,7 +43,7 @@ header {
         border-radius: 1rem;
         background-color: theme-color('primary', 'light');
         box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.10);
-        z-index: 1;
+        z-index: 2;
         top: 2.3rem;
         left: -2rem;
         padding: 1rem;
@@ -57,6 +57,7 @@ header {
 
             li {
                 margin-bottom: 1.25rem;
+
                 span {
                     color: theme-color('secundary', 'light');
                     font-size: 0.9rem;
@@ -70,13 +71,13 @@ header {
                     }
                 }
 
-                &:nth-last-child(1){
+                &:nth-last-child(1) {
                     margin-bottom: 0;
                 }
             }
         }
     }
-    
+
     .header__iconBtn {
         width: 0.4rem;
         height: 0.4rem;
@@ -91,7 +92,7 @@ header {
         flex-direction: row;
         gap: $rem * 0.75;
         margin-left: $rem;
-        
+
         button {
             display: flex;
             align-content: center;
@@ -154,22 +155,22 @@ header {
         .header__fontBtn {
             gap: $rem * 1.15;
             padding-right: $rem * 1.6;
-        
+
             span {
                 font-size: 1.125rem;
                 line-height: 1.5rem;
             }
         }
-        
+
         .header__iconBtn {
             width: 0.45rem;
             height: 0.45rem;
         }
-    
+
         .header__toggle {
             gap: $rem * 1.25;
             margin-left: $rem * 1.6;
-    
+
             .header__toggle-logo {
                 font-size: $rem * 1.8;
             }
@@ -180,11 +181,12 @@ header {
             left: -3rem;
             padding: 1.5rem;
             width: 7rem;
-    
+
             ul {
-    
+
                 li {
                     margin-bottom: 0.75rem;
+
                     span {
                         font-size: 1.125rem;
                         line-height: 1.5rem;
